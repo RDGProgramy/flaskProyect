@@ -21,5 +21,10 @@ def show(id):
     if not product:
         abort(401)
 
-    return render_template('products/show.html', products = product)
-    
+    return render_template('products/show.html', product = product)
+
+@products.route('/filter')
+@products.route('/filter/<int:id>')
+def filter(id):
+    product = PRODUCTS.get(id)
+    return render_template('products/filter.html', product = product)

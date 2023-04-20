@@ -1,0 +1,6 @@
+<h3> {{ product['name'] }} </h3>
+
+<p> {{ product['category'] }} </p>
+<p> $ {{ product['price'] }} </p>
+
+<p> Filter default: {{ product['price'] | default('Sin precio', True) }} </p>
