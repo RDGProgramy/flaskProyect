@@ -9,7 +9,9 @@
 <body>
     {% for key, product in products.items() %}
         <div>
-            {{ product['name'] }}
+            <a href="{{ url_for('products.show', id = key) }}">
+                {{ product['name'] }}
+            </a>
         </div>
     {% endfor %}
 </body>
