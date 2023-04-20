@@ -28,3 +28,8 @@ def show(id):
 def filter(id):
     product = PRODUCTS.get(id)
     return render_template('products/filter.html', product = product)
+
+
+@products.app_template_filter('iva')
+def iva_filter(product):
+    return product['price'] * .20 + product['price']
