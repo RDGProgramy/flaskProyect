@@ -3,9 +3,15 @@
         {% for key, product in products.items() %}
             <div>
                 <a href="{{ url_for('products.show', id = key) }}">
+                    {{ loop.cycle('impar', 'par', 'otro') }}
                     {{ product['name'] }}
                 </a>
                 {{ loop.index }}
+                {{ loop.index0 }}
+                {{ loop.revindex }}
+                {{ loop.first }}
+                {{ loop.last }}
+                {{ loop.previtem }}
             </div>
         {% endfor %}
     {% endblock %}
