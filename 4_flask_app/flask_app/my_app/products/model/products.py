@@ -2,7 +2,7 @@ PRODUCTS = {
     1: {
         'name': 'iPhone 11',
         'category': 'Phones',
-        'price': 1000,
+        'price': 1005,
     },
     2: {
         'name': 'Pixel',
