@@ -6,3 +6,6 @@
 <p> Filter default: {{ product['price'] | default('Sin precio', True) }} </p>
 
 {{ "<h1>Hola mundo</h1>" | safe }}
+
+
+{{ "Descripción bastante largo para una prueba para el filtro de truncate" | truncate(23) }}
