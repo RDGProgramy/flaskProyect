@@ -32,4 +32,6 @@ def filter(id):
 
 @products.app_template_filter('iva')
 def iva_filter(product):
-    return product['price'] * .20 + product['price']
+    if product['price']:
+        return product['price'] * .20 + product['price']
+    return "sin precio"
