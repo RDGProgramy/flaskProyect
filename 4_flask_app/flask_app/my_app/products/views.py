@@ -8,5 +8,5 @@ products = Blueprint('products', __name__)
 @products.route('/home')
 def index():
     print(PRODUCTS.get(2))
-    return render_template('index.html', products = PRODUCTS)
+    return render_template('products/index.html', products = PRODUCTS)
     
