@@ -1,6 +1,6 @@
 {% extends 'layout/base.html' %}
     {% block container %}
-        {% for key, product in products.items() %}
+        {% for key, product in products.items() if product['price'] and product['price'] > 1000 %}
             <div>
                 <a href="{{ url_for('products.show', id = key) }}">
                     {{ product['name'] }}
