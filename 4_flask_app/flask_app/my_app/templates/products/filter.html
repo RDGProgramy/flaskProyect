@@ -5,4 +5,15 @@
 
 <p> Filter default: {{ product['price'] | default('Sin precio', True) }} </p>
 
-{{ "<h1>Hola mundo</h1>" | safe }}
+<p>filter safe: {{ "<h1>Hola mundo</h1>" | safe }}</p>
+<p>filter truncate: {{ "Descripción bastante largo para una prueba para el filtro de truncate" | truncate(23) }}</p>
+<p>filter count: {{ "Descripción bastante largo para una prueba para el filtro de truncate" | count }}</p>
+<p>filter float: {{ 70 | float }}</p>
+<p>filter int: {{ 70.87 | int }}</p> 
+<p>filter round: {{ 3.1415926535 | round(3) }}</p> 
+<p>filter join: {{ ["iPhone", "iPad"] | join(", ") }}</p> 
+<p>filter length: {{ ["iPhone", "iPad"] | length }}</p> 
+<p>filter tojson: {{ { 'offer': false, 'price': 50.5, 'K': 45 } | tojson }}</p> 
+
+<p>filter custom global {{ product['price'] | mydouble  }}</p> 
+<p>filter custom local {{ product | iva }}</p> 
